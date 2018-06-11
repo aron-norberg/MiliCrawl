@@ -104,14 +104,14 @@ def addDictToRedis():
 		elif v[1] == "f14-tentative":
 			#redis.sadd("urls-from-solr-f14", f"{k}#language:{v[0]}#feature:{v[1]}")
 			redis.sadd("urls-from-solr-unknown", f"{k}#language:{v[0]}#feature:{v[1]}")
-			f14Count += 1
+			count += 1
 		else:
 			redis.sadd("urls-from-solr-all", f"{k}#language:{v[0]}#feature:{v[1]}")
 
 	print(f"The dictionary count is -----------> {len(urlDict)}")
 	print(f"Total Number of urls to crawl is --> {count}")
-	print(f"Urls with known features are  -----> {len(urlDict)-count}")
-	print(f"f14 verification requires ---------> {f14Count}")
+	#print(f"Urls with known features are  -----> {len(urlDict)-count}")
+	#print(f"f14 verification requires ---------> {f14Count}")
 	print(f"All Unknown Urls added to reddis set -> urls-from-solr-unkown");
 
 def main():
@@ -209,7 +209,7 @@ def main():
 	print("---------------------------")
 	print("Ending SOLR Queries . . . .")
 	print("---------------------------")
-	print ("The final count is %d" % counter)
+	#print ("The final count is %d" % counter)
 
 
 if __name__ == '__main__':
