@@ -112,7 +112,7 @@ def addDictToRedis():
 	print(f"Total Number of urls to crawl is --> {count}")
 	print(f"Urls with known features are  -----> {len(urlDict)-count}")
 	print(f"f14 verification requires ---------> {f14Count}")
-	print(f"All Unknown Urls added to reddis set -> urls-from-solr-unkown");
+	print(f"All Unknown Urls added to reddis set -> urls-from-solr-unkown")
 
 def main():
 
